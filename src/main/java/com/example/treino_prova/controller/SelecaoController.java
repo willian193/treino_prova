@@ -28,4 +28,17 @@ public class SelecaoController {
                 .status(201)
                 .body(selecaoRepository.save(selecao));
     }
+
+    @GetMapping("/grupo")
+    public List<Selecao> listarPorGrupo() {
+        return selecaoRepository.findAllOrderByGrupo();
+    }
+
+    @GetMapping("/limites")
+    public List<Selecao> listarNosLimites() {
+        return selecaoRepository
+
+                .findByJogadoresDisponiveisLessThanEqualOrJogadoresDisponiveisGreaterThanEqual(0
+                        , 100);
+    }
 }

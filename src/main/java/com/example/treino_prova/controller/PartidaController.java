@@ -19,6 +19,7 @@ public class PartidaController {
 
     private final PartidaService partidaService;
     private final PartidaRepository partidaRepository;
+    private final PartidaService partidaService;
 
     @GetMapping
     public List<Partida> listar() {

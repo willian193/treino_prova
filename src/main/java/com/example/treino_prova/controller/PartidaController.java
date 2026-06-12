@@ -17,7 +17,6 @@ import java.util.List;
 @RequiredArgsConstructor
 public class PartidaController {
 
-    private final PartidaService partidaService;
     private final PartidaRepository partidaRepository;
     private final PartidaService partidaService;
 
